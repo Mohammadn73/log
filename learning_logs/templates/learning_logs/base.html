@@ -1,0 +1,86 @@
+{% load bootstrap4 %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+	<title> Learning log</title>
+	{% bootstrap_css %}
+	{% bootstrap_javascript jquery='full' %}
+
+	<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+	<!-- <link rel="stylesheet" href= "{% static 'css/font-awesome.min.css' %}"> -->
+	<!-- <link rel="stylesheet" href= "{% static 'css/bootstrap.css' %}"> -->
+	<!-- <link rel="stylesheet" href= "{% static 'css/style.css' %}"> -->
+		
+</head>
+	
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light mb-2 border">
+		<a class="navbar-brand" href="{%url 'learning_logs:index'%}"> Home </a>
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarCollapse" aria-controls="navbarCollapse"
+			aria-expanded="false" aria-lable="Toggle navigation">
+			<span class="navbar-toggler-icon">
+			</span>
+			
+		</button>
+		
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="{%url 'learning_logs:topics'%}"> Topics </a>
+				</li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				{%if user.is_authenticated%}
+				<li class="nav-item">
+					<span class="navbar-brand">Hello,{{user.username}}. </span>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{%url 'users:logout'%}"> Logout </a>
+				</li>
+		
+				{%else%}
+					
+				<li class="nav-item">
+				
+					<a class="nav-link" href="{%url 'users:login'%}"> Login </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{%url 'users:register'%}"> Register </a>
+				</li>
+				{%endif%}
+				
+				
+			</ul>
+		</div>
+	</nav>
+	<main role="main" class="container-fluid ">
+		<div class="rounded mb-2  bg-dark text-light border-bottom">
+		{% block page_header %}
+        {% endblock page_header %}
+		</div>
+			
+		<div>
+			{% block content %}
+			
+			{% endblock content %}
+		</div>
+		
+		
+	</main>
+		
+  <!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
+  <!-- <script src="{% static 'js/tether.min.js' %}"></script> -->
+  <!-- <script src="{% static 'js/bootstrap.min.js' %}"></script> -->
+  <!-- <script src="{% static 'https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js' %}"></script> -->
+  <!-- <script> -->
+    <!-- CKEDITOR.replace('editor1'); -->
+  <!-- </script>	 -->
+</body>
+	
+	
+</html>

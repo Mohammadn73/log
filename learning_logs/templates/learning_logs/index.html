@@ -1,0 +1,209 @@
+{% extends "learning_logs/base.html" %}
+<!-- {% load bootstrap4 %} -->
+<!-- {% load static %} -->
+<!-- {% bootstrap_css %} -->
+<!-- {% bootstrap_javascript jquery='full' %} -->
+<!-- {% bootstrap_jquery %} -->
+<!-- {% bootstrap_javascript %} -->
+
+
+
+{% block page_header %}
+<h1 class=" container-fluid text-center"> Learning log Site  </h1>
+{% endblock page_header %}
+
+
+{% block content %}
+
+<div id="faradars" class=" container carousel slide" data-ride="carousel">
+	<ul class="carousel-indicators">
+		<li data-target="#faradars" data-slide-to="0" class="active"></li>
+		<li data-target="#faradars" data-slide-to="1"></li>
+		<li data-target="#faradars" data-slide-to="2"></li>
+	</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img  src="{% static 'img/img1.jpg' %}" width="1100" height="500" >
+			
+			<div class="carousel-caption">
+				<h3>Bootstrap 4</h3>
+				<p>FaraDars Bootstrap 4 Video Tutorials</p>
+				<a href="http://faradars.org" class="btn btn-danger">FaraDars.org</a>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="{% static 'img/img2.jpg' %}" width="1100" height="500" >
+		</div>
+		<div class="carousel-item">
+			<img src="{% static "img/img3.jpg" %}" width="1100" height="500">
+		</div>
+	</div>
+	<a class="carousel-control-prev" href="#faradars" data-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+	</a>
+	<a class="carousel-control-next" href="#faradars" data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+	</a>
+</div>
+
+<div>
+<p> </p>
+</div>
+	
+		
+	<div class="jumbotron text-center">
+		<h1>My First Bootstrap Page Degin By Mohammad Najafi</h1>
+		<p class="lead">Resize this responsive page to see the effect!</p> 
+	</div>
+  
+<div class=" mb-2 d-flex justify-content-around">
+  
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'img/img1.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'img/img2.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'img/img3.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  
+</div>
+
+<img class="rounded mx-auto d-block img-fluid" src="{% static 'img/img1.jpg' %}" alt="Responsive image">
+
+<div class="container-fluid">
+
+
+
+	<div class="card-body">
+	  <div class="table-responsive">
+		<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+		  <thead>
+			<tr>
+			  <th>Name</th>
+			  <th>Position</th>
+			  <th>Office</th>
+			  <th>Age</th>
+			  <th>Start date</th>
+			  <th>Salary</th>
+			</tr>
+		  </thead>
+		  <tfoot>
+			<tr>
+			  <th>Name</th>
+			  <th>Position</th>
+			  <th>Office</th>
+			  <th>Age</th>
+			  <th>Start date</th>
+			  <th>Salary</th>
+			</tr>
+		  </tfoot>
+		  <tbody>
+			<tr>
+			  <td>Tiger Nixon</td>
+			  <td>System Architect</td>
+			  <td>Edinburgh</td>
+			  <td>61</td>
+			  <td>2011/04/25</td>
+			  <td>$320,800</td>
+			</tr>
+			<tr>
+			  <td>Garrett Winters</td>
+			  <td>Accountant</td>
+			  <td>Tokyo</td>
+			  <td>63</td>
+			  <td>2011/07/25</td>
+			  <td>$170,750</td>
+			</tr>
+
+		  </tbody>
+		</table>
+	  </div>
+	</div>
+
+
+ <!-- BUTTON WITH COLLAPSE -->
+    <button class="btn btn-primary d-block mb-4" data-toggle="collapse" data-target="#collapse-btn-1">Read More</button>
+
+    <div class="collapse" id="collapse-btn-1">
+      <div class="card">
+        <div class="card-block">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit eius libero quisquam nobis explicabo vel non necessitatibus ipsum doloribus cupiditate voluptate recusandae quo autem error debitis, sed, minima repellendus commodi.
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCORDION -->
+    <div id="accordion" role="tablist">
+      <div class="card">
+        <div class="card-header" role="tab" id="heading">
+          <h5 class="mb-0"><a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
+            Collapse One
+          </a></h5>
+        </div>
+
+        <div id="collapse1" class="collapse show">
+          <div class="card-block">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ea iste a doloremque, cumque, debitis eum vel ipsum architecto aut, recusandae totam ullam aperiam. Nesciunt expedita officiis animi quam corporis optio inventore facilis sint et nulla in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi nostrum officia, illo.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" role="tab" id="heading">
+          <h5 class="mb-0"><a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+            Collapse Two
+          </a></h5>
+        </div>
+
+        <div id="collapse2" class="collapse">
+          <div class="card-block">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ea iste a doloremque, cumque, debitis eum vel ipsum architecto aut, recusandae totam ullam aperiam. Nesciunt expedita officiis animi quam corporis optio inventore facilis sint et nulla in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi nostrum officia, illo.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" role="tab" id="heading">
+          <h5 class="mb-0"><a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
+            Collapse Three
+          </a></h5>
+        </div>
+
+        <div id="collapse3" class="collapse">
+          <div class="card-block">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ea iste a doloremque, cumque, debitis eum vel ipsum architecto aut, recusandae totam ullam aperiam. Nesciunt expedita officiis animi quam corporis optio inventore facilis sint et nulla in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi nostrum officia, illo.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  
+
+  <footer  class="bg-dark text-white mt-5 p-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="lead text-center">Copyright &copy; 2020 Blogen</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+{% endblock content %}
